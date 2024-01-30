@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19256fe3c1.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="port">Portfolio</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Web Developer</p>
+                <h1>Hi, I'm <span>Jay</span> <br>
+                    Chugh </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="chugh.webp" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> a proficient web developer with expertise in HTML, CSS, JavaScript, React.js, Bootstrap,
+                        Node.js, MongoDB, and Express. Highlight your strong problem-solving skills that you leverage to
+                        create efficient and dynamic web solutions.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab " id="skills">
+                        <ul>
+                            <li><span>Front-end </span><br>Reactjs, Bootstrap,Javascript</li>
+                            <li><span>Back-end</span><br>NodeJs, Express, MongoDb</li>
+                            <li><span>Problem Solving </span><br>DSA,C++</li>
+                            <li><span>Other </span><br>Git,Github,Vs code</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2018-2020</span><br>12th from Prudence School </li>
+                            <li><span>2020-2024</span><br>Btech in Information technology from GGSIPU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Recent Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/image-1.png" alt="">
+                    <div class="layer">
+                        <h3>News App</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit illum similique quasi
+                            blanditiis veritatis dicta illo cumque libero, obcaecati sint. Aspernatur aliquid placeat
+                            veritatis quae tempora illo sit. Voluptatem, sit?</p>
+                        <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/image-2.png" alt="">
+                    <div class="layer">
+                        <h3>Color picker Extension</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit illum similique quasi
+                            blanditiis veritatis dicta illo cumque libero, obcaecati sint. Aspernatur aliquid placeat
+                            veritatis quae tempora illo sit. Voluptatem, sit?</p>
+                        <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/image-3.png" alt="">
+                    <div class="layer">
+                        <h3>TicTacToe</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit illum similique quasi
+                            blanditiis veritatis dicta illo cumque libero, obcaecati sint. Aspernatur aliquid placeat
+                            veritatis quae tempora illo sit. Voluptatem, sit?</p>
+                        <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>jaychugh.01@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7982516033</p>
+                    <div class="social-icons">
+                        <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn-2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn-2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <!-- COPYRIGHT SECTION -->
+        <div class="copyright">
+            <p>Copyright &copy;, Portfolio Website
+        </div>
+
+
+
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-content");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link")
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+        </script>
+        <script>
+            // Menu functionality
+            var sidemeu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemeu.style.right = "0";
+            }
+            function closemenu() {
+                sidemeu.style.right = "-200px";
+            }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxriKRnlMPItOSckmnQzbVinkeqNgU3zr5_xCA5GjVGtYtSigHROC5PKCdVeHil9vD_/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message sent Successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = " ";
+                        }, 2000);
+                        form.reset();
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+</body>
+
+</html>
